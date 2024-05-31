@@ -1,12 +1,12 @@
-Feature: Demo Feature
+Feature: Validate Google Search Results
 
-  Demo Feature Description
+  @demo
   Scenario Outline: Validate the google search result
-    Given I open the google search page
-    When I search with <searchText> keyword
-    # And I click on the first search result
-    # Then the URL should match <expectedURL>
+    Given I navigate to the Google search page
+    When I search for <searchText>
+    And I click on the first search result
+    Then the URL should match <expURL>
 
     Examples:
-      | testcaseID | searchText | expUrl  |
-      | DEMO_0001  | WDIO       | Value 3 |
+      | testCaseID | searchText | expURL                |
+      | DEMO_0001  | WDIO       | https://webdriver.io/ |
